@@ -1,0 +1,48 @@
+🖼 MVC Diagram (তোমার Student Example অনুযায়ী)
+          +-------------------+
+          |     Controller    |
+          | StudentController |
+          +-------------------+
+             ^            |
+   set/get   |            | updateView(), ShowMessage()
+             |            v
++----------------+   +------------------+
+|     Model      |   |       View       |
+|   Student      |   |   StudentView    |
+|  (name, age)   |   | print details    |
++----------------+   +------------------+
+
+
+🔹 ব্যাখ্যা তোমার কোড থেকে:
+
+Model (Student)
+
+name, age রাখছে।
+
+getter/setter দিয়ে ডাটা ম্যানেজ করছে।
+
+View (StudentView)
+
+শুধু ডাটা Display করছে (printStudentDetails, printMessage)।
+
+Controller (StudentController)
+
+Student এর ডাটা Update করছে।
+
+View কে নির্দেশ দিচ্ছে, কীভাবে দেখাতে হবে।
+
+🔹 Flow Example (তোমার Main থেকে):
+
+Main → Student বানায় (Model)
+
+Main → StudentView বানায় (View)
+
+Main → StudentController বানায় (Controller)
+
+Controller → updateView() কল করে → View ডাটা দেখায়।
+
+Controller → setStudentName("Ali") দিয়ে Model এ ডাটা আপডেট করে।
+
+Controller → আবার updateView() → View নতুন ডাটা দেখায়।
+
+✅ এই Diagram + Flow দেখলেই বুঝতে পারবে তোমার কোড কিভাবে ঠিকভাবে MVC Pattern follow করছে।
